@@ -1,0 +1,564 @@
+body {
+  text-align: center;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+}
+
+table {
+  table-layout: fixed;
+  width: 65vw;
+  margin: 1rem auto;
+  max-width: 1500px;
+  min-width: 800px;
+}
+
+.gen-table{
+  width: 70vw;
+}
+table,
+td,
+th {
+  border-collapse: collapse;
+  background-clip: padding-box;
+  border: 2px solid black;
+}
+
+td,
+th {
+  word-wrap: normal;
+  padding: 0.4rem 5px;
+  font-size: 1.7em;
+  height: 35px;
+}
+
+.chart-descriptor {
+  padding: 0 1px;
+}
+
+.chart-descriptor > input,
+select {
+  height: 100%;
+}
+
+#date-data-cell {
+  font-size: 1.6em;
+}
+
+input {
+  background-color: inherit;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.alternate-color:nth-child(even) > *:not(th) {
+  background-color: rgb(230, 228, 228);
+}
+
+select {
+  width: 100%;
+}
+
+.col-header-elem {
+  font-size: 1.6em;
+  padding: 0;
+}
+
+.row-elem,
+.extra-pom-input,
+#base-input {
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+.row-elem::placeholder,
+.extra-pom-input::placeholder,
+#base-input::placeholder {
+  font-weight: bold;
+}
+
+.row-elem:hover,
+.extra-pom-input:hover,
+.row-elem:focus,
+.extra-pom-input:focus,
+.row-elem:focus-visible,
+.extra-pom-input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+SIZES .data-row {
+  line-height: 3em;
+}
+
+.data > input,
+.chart-descriptor > input {
+  border: none;
+  padding-left: 0.25rem;
+  outline: none;
+  box-shadow: none;
+}
+.chart-descriptor > input::-ms-input-placeholder {
+  font-weight: 100;
+}
+
+.base-row > .measurement-cell {
+  background-color: rgba(211, 211, 211, 0.9);
+}
+
+.hover-bg:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.select-bg {
+  background-color: rgba(211, 211, 211, 0.9);
+}
+
+.center-align {
+  text-align: center;
+  color: black !important;
+}
+
+.left-align {
+  text-align: left;
+}
+
+#bar,
+#pointer {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#bar {
+  width: 1rem;
+  background-color: black;
+  height: 0.25rem;
+}
+
+#pointer {
+  width: 0;
+  height: 0;
+  border-top: 1rem solid transparent;
+  border-left: 2rem solid black;
+  border-bottom: 1rem solid transparent;
+}
+
+#nav {
+  font-size: 1.5rem;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.delete-mode:hover {
+  background-color: rgba(255, 0, 0, 0.25);
+  cursor: arrow;
+}
+
+.delete-btn-bg {
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+#scroll-cell {
+  padding: 0;
+  font-size: 1.7em;
+}
+
+#scroll-items-cont {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#scroll-bar-cont {
+  margin-left: 0;
+  height: 80%;
+  width: 78%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+#scroll-bar {
+  display: block;
+  height: 100%;
+  background-color: rgba(211, 211, 211, 0.9);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#prev-cols,
+#next-cols {
+  width: 10%;
+  height: 80%;
+  background-color: rgba(211, 211, 211, 0.9);
+  font-weight: bold;
+  text-shadow: 0px 0px 1px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#next-cols {
+  margin-left: auto;
+  margin-right: 2px;
+}
+
+#prev-cols {
+  margin-right: auto;
+  margin-left: 2px;
+}
+
+.press:hover {
+  border: 1px groove black;
+}
+
+.hidden {
+  display: none;
+}
+
+#print-btn {
+  padding: 0.5em;
+  margin-bottom: 2rem;
+}
+
+.html-ent {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.html-ent img {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+}
+
+.pom-edit-row,
+.gen-row {
+  line-height: 2em;
+  font-weight: bold;
+  height: 50px;
+}
+
+.gray-bg {
+  background-color: #d3d3d380;
+}
+
+.bigger-font {
+  font-size: 1.8em;
+  font-weight:bolder;
+}
+
+.gen-chart-arrow {
+  font-size: 1.5em;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.size-cell,
+.measurement-cell,
+.extra-pom-cell {
+  padding: 0 !important;
+}
+
+.size-cell > input,
+.measurement-cell > input,
+.extra-pom-cell > input {
+  height: 75%;
+  width: 85%;
+  padding-left: 2px;
+}
+
+.gen-table .ref-cell {
+  padding: 0.75em 0;
+}
+
+.gen-foot {
+  font-size: 1.1em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.normal-weight {
+  font-weight: normal;
+}
+
+.row-manipulation-cell {
+  font-size: 1.3em;
+  padding: 0;
+  height: 50px;
+}
+
+.row-manipulation-cell:hover {
+  background-color: #03abeb;
+}
+
+.measurement-type-header {
+  font-size: 1.8em;
+  font-weight:bolder;
+}
+
+.measurement-option-row > td {
+  height: 4em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.blue-bg {
+  background-color: var(--blue-bg);
+}
+
+.orangeish-bg {
+  background-color: var(--orangeish-bg);
+}
+
+.orangeish-hover:hover {
+  background-color: #ed7d31;
+}
+
+.black-hover:hover {
+  background-color: black;
+  color: white;
+}
+
+.green-hover:hover {
+  background-color: var(--green-bg);
+}
+@media screen and (max-width: 393px) {
+  .select-bg {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    padding-bottom: 5rem;
+  }
+
+  .creator-table {
+    min-width: 300px;
+    width: 90vw;
+    font-size: 0.6em;
+  }
+
+  .creator-table thead,
+  .delete-btn-row {
+    font-size: 1.5em;
+  }
+
+  .creator-table > thead th:not(.chart-descriptor) {
+    padding: 3px;
+  }
+
+  input,
+  select {
+    font-size: 1.3em;
+    padding-left: 0;
+  }
+
+  .data-row {
+    line-height: 5em;
+    font-size: 1.1em;
+  }
+
+  #scroll-cell {
+    height: 45px;
+  }
+
+  #scroll-bar-cont {
+    margin: auto 5px;
+  }
+
+  #prev-cols,
+  #next-cols {
+    width: 15%;
+    font-size: 1.7em;
+  }
+
+  .measurement-option-row {
+    height: 6em;
+    font-size: 1.1em;
+  }
+
+  .measurement-option-row td {
+    padding: 0;
+  }
+
+  .pom-edit-row,
+  .gen-row {
+    font-size: 1em;
+    height: 5em;
+  }
+
+  .pom-edit-row td,
+  .gen-row td {
+    padding: 0 2px;
+  }
+
+  .gen-table table {
+    font-size: 1.5em;
+  }
+
+  .gen-table thead {
+    font-size: 1.3em;
+  }
+
+  .gen-table tbody {
+    font-size: 1.2em;
+  }
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    -moz-print-color-adjust: exact;
+    -ms-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+.measurement-elem,
+.row-header-elem,
+select {
+  border: none;
+}
+
+.blue-hover {
+  padding: 0;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 0;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+}
+
+.f-15 {
+  font-size: 15px !important;
+}
+#category-select-option {
+  color: #9b9a9c;
+  font-weight: 600;
+  outline: none;
+  box-shadow: none;
+}
+#generate-chart:hover {
+  background-color: #000;
+  color: #fff;
+}
+.blackk-bg:hover {
+  background-color: #000;
+  color: #fff;
+}
+.blue-hover-light:hover {
+  background-color: #8497b0;
+  color: #fff;
+}
+.blue-hover-dark:hover {
+  background-color: #305496;
+  color: #fff;
+}
+#clear-pom-btn:hover {
+  background-color: #10b9a4;
+  color: #fff;
+}
+.all-poms-btn:hover {
+  background-color: #70ad47;
+  color: #fff;
+}
+
+#extra-pom-btn:hover {
+  background-color: #00b0f0;
+  color: #fff;
+}
+
+.size-headers {
+  text-transform: uppercase;
+  overflow: auto;
+   word-wrap: break-word;
+}
+
+.delete-mode {
+  position: relative;
+  font-size: 1.3em;
+  padding: 0px 0 15px;
+}
+.delete-mode .html-ent {
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.row-manipulation-cell.add-row {
+  position: relative;
+  padding: 0 0 16px !important;
+}
+.add-row .html-ent {
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 767px) {
+  .extra-css {
+    font-size: 13px;
+    color: #000;
+    height: 43px;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+  .add-row .html-ent {
+    font-size: 20px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+  .delete-mode .html-ent {
+    font-size: 20px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+}
+#base-val-input {
+  background: no-repeat;
+  outline: none;
+  font-size: 15px;
+  border: none;
+  vertical-align: text-top;
+  padding-top: 10px;
+  box-shadow: none;
+}
+.gen-table .unit {
+  display: none;
+}
+
+.gen-table tr {
+     width: 100%;
+     margin: 0px auto;
+ }
+

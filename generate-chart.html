@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="style.css">
+<style>
+  /* for shopify page */
+  /* body > *:not(#MainContent, #table) {
+    display: none;
+  } */
+
+  @page {
+    size: auto;
+    margin: 8mm;
+  }
+  @media print {
+    html,
+    body {
+      height: 99%;
+    }
+  }
+  body {
+    margin: 1mm 1mm 1mm 1mm;
+  }
+  table,
+  td,
+  th {
+    border: 1px solid black;
+    text-align: center;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td {
+    padding: 3px;
+  }
+</style>
+
+<div>
+  <table id="table" class="gen-table">
+    <thead id="thead"></thead>
+
+    <tbody id="tbody"></tbody>
+
+    <tfoot id="tfoot"></tfoot>
+  </table>
+  <script type="module" src="generate-chart.js" defer="defer"></script>
+  <script type="module" src="common.js" defer="defer"></script>
+</div>
